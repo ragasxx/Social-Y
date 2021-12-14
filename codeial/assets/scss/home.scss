@@ -1,0 +1,81 @@
+#home-heading {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-left: 46%;
+  letter-spacing: 2px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+#home-container {
+  display: flex;
+
+  //   min-height: 100%;
+  #feed-posts {
+    width: 80%;
+    margin-left: 15px;
+    padding: 10px;
+    height: auto;
+    overflow: hidden;
+    max-height: 40%;
+
+    .postForm {
+      textarea {
+        // width: 25%;
+        // height: 30%;
+        border-radius: 3px;
+        border: 3px solid yellow;
+      }
+      input {
+        width: 5%;
+        height: 11%;
+        border-radius: 5px;
+        border: 2px solid green;
+        color: black;
+        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    }
+
+    h4 {
+      font-size: 24px;
+      padding: 10px;
+      font-family: sans-serif;
+      font-weight: 750;
+      color: white;
+      margin-left: 30px;
+    }
+  }
+
+  #users-friends {
+    width: 30%;
+    padding: 15px;
+    border-left: 2px solid white;
+    height: 100%;
+  }
+
+  #posts-list-container {
+    ul {
+      li {
+        p {
+          font-size: 1.1rem;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 500;
+          a {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            margin-left: 11px;
+            text-decoration: none;
+            color: red;
+            padding: 10px;
+          }
+          small {
+            font-size: 14px;
+            padding-top: 30px;
+            font-family: cursive;
+          }
+        }
+      }
+    }
+  }
+}
