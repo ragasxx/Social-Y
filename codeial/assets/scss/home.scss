@@ -9,6 +9,7 @@
 
 #home-container {
   display: flex;
+  height: auto;
 
   //   min-height: 100%;
   #feed-posts {
@@ -17,7 +18,7 @@
     padding: 10px;
     height: auto;
     overflow: hidden;
-    max-height: 40%;
+    height: 100%;
 
     .postForm {
       textarea {
