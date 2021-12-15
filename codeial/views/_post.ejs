@@ -10,9 +10,10 @@
     <br />
     <small> - <%= post.user.name %> </small>
   </p>
+
   <div class="post-comments">
     <% if (locals.user){ %>
-    <form action="/comments/create" method="POST">
+    <form action="/comments/create" method="POST" class="formforcomments">
       <input
         type="text"
         name="content"

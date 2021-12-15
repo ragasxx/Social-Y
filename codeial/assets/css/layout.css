@@ -2,6 +2,6 @@ body {
   margin: 0;
   /* text-align: center; */ }
   body #layout-main {
-    background-color: cyan;
+    background-color: black;
     height: 100%;
     overflow: auto; }
