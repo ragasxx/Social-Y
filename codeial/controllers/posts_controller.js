@@ -1,5 +1,6 @@
 const Post = require("../models/post");
 const Comment = require("../models/comment");
+const { setFlash } = require("../config/middleware");
 
 module.exports.create = async function (req, res) {
   try {
@@ -8,9 +9,12 @@ module.exports.create = async function (req, res) {
       user: req.user._id,
     });
 
+    req.flash("success", "POST PUBLISHED!");
+
     return res.redirect("back");
   } catch (err) {
-    console.log("error", err);
+    req.flash("error", err);
+    return res.redirect("back");
   }
 };
 
@@ -22,12 +26,13 @@ module.exports.destroy = async function (req, res) {
       post.remove();
 
       await Comment.deleteMany({ post: req.params.id });
+      req.flash("success", "POST & COMMENTS DELETED");
       return res.redirect("back");
     } else {
       return res.redirect("back");
     }
   } catch (err) {
-    console.log("err", err);
-    return;
+    req.flash("error", err);
+    return res.redirect("back");
   }
 };

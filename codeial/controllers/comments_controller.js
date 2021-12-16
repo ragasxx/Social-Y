@@ -10,6 +10,8 @@ module.exports.create = async function (req, res) {
         post: req.body.post,
         user: req.user._id,
       });
+
+      req.flash("success", "YOU MADE A COMMENT");
       // handle error
 
       post.comments.push(comment);
@@ -34,6 +36,7 @@ module.exports.destroy = async function (req, res) {
       let post = await Post.findByIdAndUpdate(postId, {
         $pull: { comments: req.params.id },
       });
+      req.flash("success", "YOU DELETED A COMMENT");
       return res.redirect("back");
     } else {
       return res.redirect("back");
