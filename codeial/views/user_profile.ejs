@@ -1,9 +1,14 @@
 <link rel="stylesheet" href="/css/user_profile.css" />
-<h1>Codeial / Profile Page</h1>
+
+<img src="<%= user.avatar %>" alt="<%= user.name %>" width="100" />
 
 <% if(user.id == profile_user.id) { %>
 
-<form action="/users/update/<%= profile_user.id %>" method="post">
+<form
+  action="/users/update/<%= profile_user.id %>"
+  enctype="multipart/form-data"
+  method="post"
+>
   <input
     name="name"
     type="text"
@@ -16,6 +21,7 @@
     placeholder="YOUR EMAIL"
     value="<%= profile_user.email %>"
   />
+  <input type="file" name="avatar" placeholder="Profile picture" />
   <input type="submit" value="Update" />
 </form>
 
