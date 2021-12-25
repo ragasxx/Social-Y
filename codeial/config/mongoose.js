@@ -1,6 +1,9 @@
+const env = require("../config/environment");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/socially");
+mongoose.connect(
+  `mongodb+srv://ragas:test1234@cluster1.vhwrm.mongodb.net/${env.db}`
+);
 
 const db = mongoose.connection;
 

@@ -54,13 +54,13 @@ class PostComments {
     // I've added a class 'delete-comment-button' to the delete comment link and also id to the comment's li
     return $(`<li id="comment-${comment._id}">
                           <p>
-                              
+                          ${comment.content}
+                          <br> 
                               <small>
                                   <a class="delete-comment-button" href="/comments/destroy/${comment._id}">X</a>
                               </small>
                               
-                              ${comment.content}
-                              <br>
+                            <br>
                               <small>
                                   ${comment.user.name}
                               </small>

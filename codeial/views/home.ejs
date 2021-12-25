@@ -1,5 +1,7 @@
-<h1 id="home-heading"><%= title %></h1>
+<!DOCTYPE html>
+<h1 id="home-heading">ALL YOUR POSTS ARE HERE</h1>
 <link rel="stylesheet" href="/css/home.css" />
+<link rel="stylesheet" href="/css/chat_box.css" />
 
 <div id="home-container">
   <section id="feed-posts">
@@ -39,5 +41,19 @@
     </p>
     <%}%>
   </section>
+  <%-include('_chat_box')-%>
 </div>
+<script src="/js/home_post_comments.js"></script>
 <script src="/js/home_posts.js"></script>
+
+<!-- socket.io file for frontend -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+
+<% if(locals.user){ %>
+<script>
+  new ChatEngine("user-chat-box", "<%= locals.user.email %>" , "<%= locals.user.name%>");
+</script>
+<% } %>
+</html>

@@ -1,0 +1,39 @@
+#signin-cont {
+  display: flex;
+  width: 90%; }
+  #signin-cont #info {
+    width: 46%;
+    margin-top: 15%; }
+    #signin-cont #info h1 {
+      margin-top: 15%;
+      color: white;
+      margin-left: 22%;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-weight: 900; }
+  #signin-cont #form {
+    width: 60%;
+    margin-top: 15%; }
+    #signin-cont #form input,
+    #signin-cont #form textarea {
+      max-width: 90%;
+      margin: 15px;
+      padding: 4px 10px;
+      border: 0px solid transparent;
+      border-bottom: 2px solid white;
+      color: #d9dcdd;
+      background: transparent;
+      width: 90%;
+      line-height: 1.6;
+      font-size: 1.05rem; }
+
+#google-auth {
+  width: 40%;
+  margin-top: 8%;
+  margin-left: 45%; }
+  #google-auth a {
+    text-decoration: none;
+    color: #df2ae6;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-bottom: 2px solid white; }

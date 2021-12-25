@@ -1,10 +1,11 @@
 #home-heading {
   color: white;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  margin-left: 46%;
+  margin-left: 35%;
   letter-spacing: 2px;
   padding: 10px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  text-decoration: underline; }
 
 #home-container {
   display: flex;
@@ -43,12 +44,14 @@
     #home-container #users-friends h2 {
       color: white;
       font-size: 22px;
-      font-family: cursive; }
+      font-family: cursive;
+      text-decoration: underline; }
     #home-container #users-friends p a {
       text-decoration: none;
       font-size: 17px;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: 550; }
+      font-weight: 550;
+      color: #da1aa0; }
   #home-container #posts-list-container ul li p {
     color: white;
     font-size: 1.1rem;

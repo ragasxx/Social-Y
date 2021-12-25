@@ -1,18 +1,27 @@
-<h1>Sign Up</h1>
+<link rel="stylesheet" href="/css/user_sign_up.css" />
 
-<form action="/users/create" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <input type="password" name="password" placeholder="Password" required />
-  <input
-    type="password"
-    name="confirm_password"
-    placeholder="Confirm Password"
-    required
-  />
-  <input type="submit" value="Sign Up" />
-</form>
+<div id="signup-cont">
+  <div id="info">
+    <h1>Sign Up</h1>
+  </div>
+  <div id="form">
+    <form action="/users/create" method="POST" id="signup-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input
+        type="password"
+        name="confirm_password"
+        placeholder="Confirm Password"
+        required
+      />
+      <input type="submit" value="Sign Up" />
+    </form>
+  </div>
+</div>
 
-<p>
-  <a href="/users/auth/google">GOOGLE SIGNUP/SIGNIN</a>
-</p>
+<div id="google-auth">
+  <p>
+    <a href="/users/auth/google">GOOGLE SIGNUP/SIGNIN</a>
+  </p>
+</div>
