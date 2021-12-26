@@ -2,7 +2,7 @@ const express = require("express");
 const env = require("./config/environment");
 const cookieParser = require("cookie-parser");
 const app = express();
-let port = process.env.PORT;
+let port = process.env.PORT || 8000;
 const expressLayouts = require("express-ejs-layouts");
 const db = require("./config/mongoose");
 // used for session cookie
@@ -19,7 +19,7 @@ const customMware = require("./config/middleware");
 // for socket.io
 const chatServer = require("http").Server(app);
 const chatSockets = require("./config/chat_sockets").chatSockets(chatServer);
-chatServer.listen(5000);
+chatServer.listen(port);
 console.log("chat server is listening on the port 5000");
 
 const path = require("path");
@@ -87,9 +87,9 @@ app.use(customMware.setFlash);
 // use express router
 app.use("/", require("./routes"));
 
-if (port == null || port == "") {
-  port = 8000;
-}
+// if (port == null || port == "") {
+//   port = 8000;
+// }
 
 app.listen(port, function (err) {
   if (err) {
