@@ -4,16 +4,14 @@ class ChatEngine {
     this.userEmail = userEmail;
     this.userName = userName;
 
-    // var connectionOptions = {
-    //   "force new connection": true,
-    //   reconnectionAttempts: "Infinity",
-    //   timeout: 10000,
-    //   transports: ["websocket"],
-    // };
+    var connectionOptions = {
+      "force new connection": true,
+      reconnectionAttempts: "Infinity",
+      timeout: 10000,
+      transports: ["websocket"],
+    };
 
-    this.socket = io.connect(
-      "ws://sociall-y.herokuapp.com/socket.io/?EIO=4&transport=websocket"
-    );
+    this.socket = io.connect("http://localhost:5000", connectionOptions);
     if (this.userEmail) {
       this.connectionHandler();
     }
