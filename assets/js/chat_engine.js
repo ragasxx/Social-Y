@@ -11,10 +11,7 @@ class ChatEngine {
       transports: ["websocket"],
     };
 
-    this.socket = io.connect(
-      "ws://sociall-y.herokuapp.com:9352/socket.io/?EIO=4&transport=websocket",
-      connectionOptions
-    );
+    this.socket = io.connect("http://localhost:5000", connectionOptions);
     if (this.userEmail) {
       this.connectionHandler();
     }
